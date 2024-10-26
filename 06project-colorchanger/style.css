@@ -1,0 +1,47 @@
+body{
+    background-color: #833e3e;
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    
+    
+}
+
+.color-hover{
+    
+    display: flex;
+    justify-content: center;
+    gap: 1px;
+    
+    
+}
+.color{
+  
+    height: 200px;
+    width: 100px;
+}
+.center{
+   background-color: green;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+   display: flex;
+  
+
+   
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.violet{
+    background-color: violet;
+}
+.orange{
+    background-color: orange;
+}
+.pink{
+    background-color: pink;
+}
