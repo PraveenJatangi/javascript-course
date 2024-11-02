@@ -5,8 +5,8 @@ var states=["telangana",
     "maharashtra"
 ];
 
-states.forEach((s)=>(console.log(s)));
-console.log(states[1]);
+// states.forEach((s)=>(console.log(s)));
+// console.log(states[1]);
 
 const val={
     it:"information",
