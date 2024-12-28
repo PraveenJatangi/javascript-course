@@ -1,17 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="./script.js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-    <h2>hello world</h2>
-    <h1 id="demo"></h1>
-    <script src="./script.js">
-        let carname="ragav";
-        document.getElementById("demo").innerHTML= carname;
+    <h1>Welcome!</h1>
+    <p id="greeting">Hello, </p>
+
+    <script>
+        // Extract query parameters from URL
+        const params = new URLSearchParams(window.location.search);
+        const firstName = params.get('firstName');
+        const lastName = params.get('lastName');
+
+        // Display the greeting message
+        document.getElementById('greeting').textContent = `Hello, ${firstName} ${lastName}`;
     </script>
 </body>
 </html>
