@@ -51,6 +51,10 @@ console.log(Constains);
 const slicedNum=num.slice(1,4);
 console.log(slicedNum);
 
+
+const spliceNum= num.splice(1,4);
+console.log("splice number",spliceNum)
+
 //map,create new array with result of calling every element
 
 const mappedValues= num.map((number)=>number*2);
