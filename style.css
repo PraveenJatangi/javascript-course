@@ -1,0 +1,42 @@
+*{
+    border: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.loader{
+    height: 100px;
+    width: 100px;
+   border-radius: 50%;
+     border: 5px solid transparent; 
+   border-top-color: rgb(95, 219, 81);
+   position: relative;
+  animation: rotate 2s infinite ;
+}
+.loader-2{
+    position:absolute;
+    left: 0.5px;
+    top: 0px;
+    
+    height: 90px;
+    width: 90px;
+   border-radius: 50%;
+   border: 5px solid transparent; 
+   border-top-color: rgb(224, 134, 74);
+   animation: rotate 1.4s infinite ;
+}
+@keyframes rotate {
+    100%{
+        rotate: 360deg;
+    }
+}

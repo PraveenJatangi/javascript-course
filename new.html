@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Debounce Live Search</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    input {
+      padding: 10px;
+      width: 300px;
+      font-size: 16px;
+    }
+    #output {
+      margin-top: 20px;
+      font-size: 18px;
+      color: green;
+    }
+  </style>
 </head>
 <body>
-    <table>
-        <tr>
-            <th>name</th>
-            <th>age</th>
-        </tr>
-        <tr>
-            <td>praveen</td>
-            <td>20</td>
-        </tr>
-    </table>
 
-    <style>
-        table, th, td {
-          border:1px solid black;
-        }
-        </style>
+  <h2 class="">🔍 Live Search (Debounced)</h2>
+  <input type="text" id="search" placeholder="Type to search..." />
+  <div id="output"></div>
+
+  <script>
+    // ✅ Debounce Function
+    function debounce(func, delay) {
+      let timer;
+      return function (...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => func.apply(this, args), delay);
+      };
+    }
+
+    // ✅ Actual Function to Run After Debounce
+    function searchAPI(event) {
+      const query = event.target.value;
+      document.getElementById("output").textContent = `Searching for "${query}"...`;
+      console.log("API Call for:", query);
+    }
+
+    // ✅ Create Debounced Version
+    const debouncedSearch = debounce(searchAPI, 2000);
+
+    // ✅ Attach Event Listener
+    const inputBox = document.getElementById("search");
+    inputBox.addEventListener("input", debouncedSearch);
+  </script>
+
 </body>
 </html>
